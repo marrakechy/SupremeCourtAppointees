@@ -169,4 +169,14 @@ justices_appointed_by_president = {
     "Amy Coney Barrett": {"President": "Donald Trump", "Year": 2020},
 }
 
+party_justice_count = {}
+party_justice_count = {}
 
+for justice, president_info in justices_appointed_by_president.items():
+    president = president_info["President"]
+    party = president_party.get(president, "Unknown")
+    party_justice_count[party] = party_justice_count.get(party, 0) + 1
+
+most_appointed_party = max(party_justice_count, key=party_justice_count.get)
+
+print(f"The party that appointed the most Supreme Court Justices is: {most_appointed_party} with {party_justice_count[most_appointed_party]} justices.")
