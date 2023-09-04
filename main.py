@@ -170,7 +170,6 @@ justices_appointed_by_president = {
 }
 
 party_justice_count = {}
-party_justice_count = {}
 
 for justice, president_info in justices_appointed_by_president.items():
     president = president_info["President"]
